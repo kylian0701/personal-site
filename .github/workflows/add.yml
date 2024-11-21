@@ -21,10 +21,11 @@ jobs:
         CF_ZONE_ID: ${{ secrets.CF_ZONE_ID }}
       run: |
         for FILE in domains/*.json; do
+          # Parse JSON fields
+          DOMAIN=$(jq -r '.record.CNAME' "$FILE")
           USERNAME=$(jq -r '.owner.username' "$FILE")
-          RECORD_CNAME=$(jq -r '.record.CNAME' "$FILE")
 
-          if [[ -z "$USERNAME" || -z "$RECORD_CNAME" ]]; then
+          if [[ -z "$DOMAIN" || -z "$USERNAME" ]]; then
             continue
           fi
 
@@ -33,9 +34,9 @@ jobs:
             -H "Content-Type: application/json" \
             --data '{
               "type": "CNAME",
-              "name": "'"$USERNAME"'",
-              "content": "'"$RECORD_CNAME"'",
+              "name": "'"$DOMAIN"'",
+              "content": "'"$USERNAME"'.github.io",
               "ttl": 3600,
-              "proxied": true
+              "proxied": false
             }'
         done
