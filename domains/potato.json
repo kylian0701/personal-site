@@ -1,0 +1,9 @@
+{
+  "subdomain": "potato",
+  "owner": {
+    "username": "winvistalover"
+  },
+  "record": {
+    "CNAME": "winvistalover.github.io"
+  }
+}
