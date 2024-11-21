@@ -22,7 +22,7 @@ jobs:
       run: |
         for FILE in domains/*.json; do
           # Parse JSON fields
-          DOMAIN=$(jq -r '.record.CNAME' "$FILE")
+          DOMAIN=$(jq -r 'subdomain' "$FILE")
           USERNAME=$(jq -r '.owner.username' "$FILE")
 
           if [[ -z "$DOMAIN" || -z "$USERNAME" ]]; then
