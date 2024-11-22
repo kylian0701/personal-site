@@ -1,0 +1,9 @@
+{
+  "owner": {
+    "username": "winbo-yml-exe"
+  },
+  "subdomain": "winbo",
+  "record": {
+    "CNAME": "winbo-yml-exe.github.io"
+  }
+}
