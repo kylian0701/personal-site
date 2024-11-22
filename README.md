@@ -27,18 +27,17 @@ First, you’ll need to create your own GitHub Pages site. Use the [official Git
    - Click on **Add File** → **Create new file**.
    - Name your file like `<subdomain>.json`. Example: `balls.json`. Before choosing a subdomain, check the existing JSON files in the repo to make sure it’s not already in use.
    - In the file, paste the following:
-     ```json
-     {
+```json
+{
   "owner": {
-    "username": "your-github-username"
+    "username": "winbo-yml-exe"
   },
-  "subdomain": "your-subdomain",
+  "subdomain": "winbo",
   "record": {
-    "CNAME": "your-github-website-url"
+    "CNAME": "winbo-yml-exe.github.io"
   }
 }
-
-     ```
+```
      - Replace `your-subdomain` with your desired subdomain (like `balls` or `rizz`). Before choosing a subdomain, check the existing JSON files in the repo to make sure it’s not already in use.
      - Replace `your-github-website-url` with your actual GitHub Pages Website URL.
 
