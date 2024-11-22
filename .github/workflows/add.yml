@@ -21,11 +21,10 @@ jobs:
         CF_ZONE_ID: ${{ secrets.CF_ZONE_ID }}
       run: |
         for FILE in domains/*.json; do
-          # Parse JSON fields
-          DOMAIN=$(jq -r 'subdomain' "$FILE")
-          USERNAME=$(jq -r '.owner.username' "$FILE")
+          SUBDOMAIN=$(jq -r '.subdomain' "$FILE")
+          GITHUB_PAGE=$(jq -r '.record.CNAME' "$FILE")
 
-          if [[ -z "$DOMAIN" || -z "$USERNAME" ]]; then
+          if [[ -z "$SUBDOMAIN" || -z "$GITHUB_PAGE" ]]; then
             continue
           fi
 
@@ -34,8 +33,8 @@ jobs:
             -H "Content-Type: application/json" \
             --data '{
               "type": "CNAME",
-              "name": "'"$DOMAIN"'",
-              "content": "'"$USERNAME"'.github.io",
+              "name": "'"$SUBDOMAIN"'",
+              "content": "'"$GITHUB_PAGE"'",
               "ttl": 3600,
               "proxied": false
             }'
