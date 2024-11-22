@@ -38,8 +38,8 @@ First, you’ll need to create your own GitHub Pages site. Use the [official Git
   }
 }
 ```
-     - Replace `your-subdomain` with your desired subdomain (like `balls` or `rizz`). Before choosing a subdomain, check the existing JSON files in the repo to make sure it’s not already in use.
-     - Replace `your-github-website-url` with your actual GitHub Pages Website URL.
+  - Replace `your-subdomain` with your desired subdomain (like `balls` or `rizz`). Before choosing a subdomain, check the existing JSON files in the repo to make sure it’s not already in use.
+  - Replace `your-github-website-url` with your actual GitHub Pages Website URL.
 
 3. **Save the File**
    - After entering the information, click **Commit** to save your changes.
