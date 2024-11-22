@@ -29,17 +29,18 @@ First, you’ll need to create your own GitHub Pages site. Use the [official Git
    - In the file, paste the following:
      ```json
      {
-       "subdomain": "your-subdomain",
-       "owner": {
-         "username": "your-github-username"
-       },
-       "record": {
-         "CNAME": "your-github-pages-site-url"
-       }
-     }
+  "owner": {
+    "username": "your-github-username"
+  },
+  "subdomain": "your-subdomain",
+  "record": {
+    "CNAME": "your-github-website-url"
+  }
+}
+
      ```
      - Replace `your-subdomain` with your desired subdomain (like `balls` or `rizz`). Before choosing a subdomain, check the existing JSON files in the repo to make sure it’s not already in use.
-     - Replace `your-github-pages-site-url` with your actual GitHub Pages Website URL.
+     - Replace `your-github-website-url` with your actual GitHub Pages Website URL.
 
 3. **Save the File**
    - After entering the information, click **Commit** to save your changes.
