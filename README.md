@@ -30,11 +30,11 @@ First, you’ll need to create your own GitHub Pages site. Use the [official Git
 ```json
 {
   "owner": {
-    "username": "winbo-yml-exe"
+    "username": "your-github-username"
   },
-  "subdomain": "winbo",
+  "subdomain": "your-subdomain",
   "record": {
-    "CNAME": "winbo-yml-exe.github.io"
+    "CNAME": "your-github-website-url"
   }
 }
 ```
