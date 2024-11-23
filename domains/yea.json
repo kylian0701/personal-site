@@ -4,6 +4,6 @@
   },
   "subdomain": "https://github.com/kylian0701/personal-site/edit/main/domains",
   "record": {
-    "CNAME": ""
+    "CNAME": "https://github.com/kylian0701/personal-site/tree/main"
   }
 }
